@@ -1,10 +1,15 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { Provider } from 'react-redux'; // Подключение Provider
 
-import App from './App.tsx';
+import { store } from './store'; // Наше хранилище
+
+import { App } from './App.tsx';
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
-        <App />
+        <Provider store={store}>
+            <App />
+        </Provider>
     </StrictMode>,
 );

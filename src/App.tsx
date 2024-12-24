@@ -1,30 +1,45 @@
-import { useState } from 'react';
+import React from 'react';
 
-import './App.scss';
+import { useAppDispatch, useAppSelector } from './store/hooks';
+import { setTheme } from './store/reducers/app/appReducer';
+import { Theme } from './store/reducers/app/types.ts';
+import { login, logout } from './store/reducers/user/userReducer';
+import { MainPage } from './pages/MainPage/MainPage.tsx';
 
-function App() {
-    const [count, setCount] = useState(0);
+export const App: React.FC = () => {
+    const dispatch = useAppDispatch();
+    const theme = useAppSelector((state) => state.app.theme);
+    const isAuthenticated = useAppSelector((state) => state.user.isAuthenticated);
+
+    const toggleTheme = () => {
+        const newTheme = theme === Theme.Light ? Theme.Dark : Theme.Light;
+        dispatch(setTheme(newTheme));
+    };
+
+    const toggleAuth = () => {
+        if (isAuthenticated) {
+            dispatch(logout());
+        } else {
+            dispatch(login({
+                isAuthenticated: true,
+                user: {
+                    name: 'John Doe', email: '123@mail.ru'
+                }
+            }));
+        }
+    };
 
     return (
-        <>
-            <div className={'root'}>
-                <a
-                    href="https://react.dev"
-                    target="_blank"
-                >
-                    1231231231231231231232
-                </a>
+        <div className={'root'}>
+            <div className={'controls'}>
+                <button onClick={toggleTheme}>
+                    {theme === Theme.Light ? 'Темная тема' : 'Светлая тема'}
+                </button>
+                <button onClick={toggleAuth}>
+                    {isAuthenticated ? 'Выйти' : 'Войти'}
+                </button>
             </div>
-            <h1>Vite + React</h1>
-            <div className="card">
-                <button onClick={() => setCount(count => count + 1)}>count is {count}</button>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-        </>
+            <MainPage />
+        </div>
     );
 }
-
-export default App;
