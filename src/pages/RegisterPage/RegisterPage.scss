@@ -1,0 +1,77 @@
+@use '@root/variables.scss' as *;
+
+.register-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: $AppHeight;
+    background-color: $Gray_1;
+    padding-left: $AppPadding;
+    padding-right: $AppPadding;
+
+    &_container {
+        background-color: $White_1;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 450px;
+        box-sizing: border-box;
+    }
+
+    &_title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: $AppPadding;
+        color: $Black_1;
+    }
+
+    &_form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        width: 100%;
+        max-width: 400px;
+        background: $White_1;
+        border-radius: $BorderRadius_Default;
+        box-shadow: $BoxShadow_Default;
+    }
+
+    &_actions {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &_result {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5px;
+        font-size: 1rem;
+        text-align: center;
+        border-radius: $BorderRadius_Default;
+    }
+
+    &_message {
+        width: fit-content;
+        padding: 3px 12px;
+        border-radius: $BorderRadius_Default;
+    }
+
+    &_success {
+        color: $Green_1;
+        background-color: lighten($Green_1, 40%);
+    }
+
+    &_error {
+        color: $Red_1;
+        background-color: lighten($Red_1, 40%);
+    }
+
+    &_timer {
+        color: $Gray_1;
+    }
+}

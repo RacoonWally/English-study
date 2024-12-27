@@ -1,0 +1,81 @@
+@use '@root/variables.scss';
+
+.button {
+    cursor: pointer;
+    border: 1px solid $Black_1;
+    box-shadow: $BoxShadow_Default;
+    border-radius: $BorderRadius_Default;
+    font-size: 14px;
+    transition: $Transition_Default;
+
+    &_primary {
+        color: $White_1;
+        background-color: $Blue_1;
+        border-color: $Blue_1;
+
+        &:hover {
+            background-color: $Blue_2;
+            border-color: $Blue_2;
+        }
+    }
+
+    &_secondary {
+        color: $Blue_1;
+        background-color: $White_1;
+        border-color: $Gray_1;
+
+        &:hover {
+            color: $White_1;
+            background-color: $Blue_1;
+            border-color: $Blue_1;
+        }
+    }
+
+    &_light {
+        color: $Black_1;
+        background-color: $White_2;
+        border-color: $Gray_1;
+        font-size: 12px; // Небольшой размер шрифта
+        padding: 6px 10px; // Компактные отступы
+        box-shadow: none;
+
+        &:hover {
+            color: $Blue_1;
+            text-decoration: underline; // Подчеркивание текста при наведении
+        }
+
+        &:disabled {
+            color: $Gray_2;
+            border-color: $Gray_1;
+            cursor: not-allowed;
+        }
+    }
+
+    &__small {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    &__middle {
+        padding: 8px 15px;
+        font-size: 17px;
+    }
+
+    &__big {
+        padding: 10px 17px;
+        font-size: 20px;
+    }
+
+    &__inherit {
+        height: inherit;
+    }
+
+    &:disabled {
+        cursor: initial;
+        opacity: 0.5;
+        pointer-events: none;
+        background-color: $Gray_2;
+        border-color: $Gray_2;
+        color: $Black_1;
+    }
+}

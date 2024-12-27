@@ -1,23 +1,45 @@
-$AppTopMargin: 30px;
+@use '@root/variables.scss';
+@import 'sanitize.css';
 
-.root {
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: $White_1;
+    color: $Black_1;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app {
     position: relative;
 
     display: flex;
     flex-direction: column;
 
     margin-top: $AppTopMargin;
-}
 
-.controls {
-    position: fixed;
+    &_controls {
+        position: fixed;
+        display: flex;
+        background-color: $White_1;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
 
-    top: 0;
-    left: 0;
-    right: 0;
+        top: 0;
+        left: 0;
+        right: 0;
 
-    background-color: red;
-
-    width: 100%;
-    height: $AppTopMargin;
+        width: 100%;
+        height: $AppTopMargin;
+    }
 }

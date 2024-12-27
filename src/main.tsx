@@ -4,12 +4,12 @@ import { Provider } from 'react-redux'; // Подключение Provider
 
 import { store } from './store'; // Наше хранилище
 
-import { App } from './App.tsx';
+import { PageRouter } from './PageRouter.tsx';
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <Provider store={store}>
-            <App />
+            <PageRouter />
         </Provider>
     </StrictMode>,
 );

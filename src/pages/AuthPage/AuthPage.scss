@@ -1,0 +1,91 @@
+@use '@root/variables.scss' as *;
+
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: $AppHeight;
+    background-color: $Gray_1;
+    padding-left: $AppPadding;
+    padding-right: $AppPadding;
+
+    &__container {
+        background-color: $White_1;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        max-width: 400px;
+        box-sizing: border-box;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        font-size: 24px;
+        text-align: center;
+        color: $Black_1;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    &__label {
+        font-size: 14px;
+        color: $Black_1;
+    }
+
+    &__input {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid $Gray_2;
+        border-radius: 4px;
+        outline: none;
+
+        &:focus {
+            border-color: $Blue_1;
+            box-shadow: 0 0 4px $Blue_1;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    &__button {
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: $Transition_Default;
+
+        &--primary {
+            background-color: $Blue_1;
+            color: $White_1;
+
+            &:hover {
+                background-color: $Blue_2;
+            }
+        }
+
+        &--secondary {
+            background-color: $Gray_2;
+            color: $Black_1;
+
+            &:hover {
+                background-color: $Gray_1;
+            }
+        }
+    }
+}

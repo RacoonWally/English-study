@@ -1,5 +1,4 @@
 export interface AppState {
-    theme: Theme;
     language: Language;
 }
 
@@ -13,15 +12,9 @@ export enum AppActionsType {
     SetLanguage = 'SET_LANGUAGE',
 }
 
-export type AppPayloadType = Theme | Language;
-
-export enum Theme {
-    Light = 'light',
-    Dark = 'dark',
-}
+export type AppPayloadType = Language;
 
 export enum Language {
     En = 'en',
     Ru = 'ru',
 }
-
