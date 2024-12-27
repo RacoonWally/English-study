@@ -1,0 +1,9 @@
+@use "@root/variables.scss" as *;
+
+.left-menu {
+    position: relative;
+    height: $AppHeight;
+    width: 260px;
+    background-color: $Black_2;
+    transition: all 0.5s ease;
+}

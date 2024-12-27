@@ -26,6 +26,12 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "declaration": true,
+    "paths": {
+      "@root/*": ["src/*"],
+      "@store/*": ["src/store/*"],
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"]
+    }
   },
   "include": ["src"]
 }

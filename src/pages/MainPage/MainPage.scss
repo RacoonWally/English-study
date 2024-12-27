@@ -1,0 +1,6 @@
+@use '@root/variables.scss' as *;
+
+.main-page {
+    display: flex;
+    height: $AppHeight;
+}

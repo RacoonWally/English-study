@@ -8,7 +8,6 @@ export default defineConfig({
     css: {
         preprocessorOptions: {
             scss: {
-                // Глобальные переменные или миксины, которые будут доступны во всех SCSS-файлах
                 additionalData: `@use '@root/variables.scss' as *;`,
             },
         },
@@ -16,6 +15,9 @@ export default defineConfig({
     resolve: {
         alias: {
             '@root': path.resolve(__dirname, './src'),
+            '@store': path.resolve(__dirname, './src/store'),
+            '@components': path.resolve(__dirname, './src/components'),
+            '@pages': path.resolve(__dirname, './src/pages'),
         },
     },
-})
+});

@@ -7,6 +7,7 @@ import { useAppSelector } from './store/hooks';
 
 import { HeaderControls } from './components/HeaderControls/HeaderControls.tsx';
 import { PageRoutesPaths } from './PageRouter.tsx';
+import { PopupSwitcher } from '@components/PopupSwitcher/PopupSwitcher.tsx';
 
 const ROOT_CLASS_NAME = 'app';
 
@@ -24,6 +25,7 @@ export const App: React.FC = () => {
 
     return (
         <div className={ROOT_CLASS_NAME}>
+            <PopupSwitcher />
             <header className={`${ROOT_CLASS_NAME}_controls`}>
                 <HeaderControls />
             </header>

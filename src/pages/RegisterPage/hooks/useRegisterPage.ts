@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { useRegisterMutation } from '../../../store/api/userApi/userApi.ts';
-import { RegisterData } from '../../../store/reducers/user/types.ts';
+import { useRegisterMutation } from '@store/api/userApi/userApi.ts';
+import { RegisterData } from '@store/reducers/user/types.ts';
 import { PageRoutesPaths } from '../../../PageRouter.tsx';
 
 interface Data {

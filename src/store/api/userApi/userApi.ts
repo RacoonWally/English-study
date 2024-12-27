@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { AuthData, RegisterData } from '../../reducers/user/types.ts';
+
+import { AuthData, RegisterData } from '@store/reducers/user/types.ts';
 
 export const userApi = createApi({
     reducerPath: 'userApi',
@@ -13,6 +14,7 @@ export const userApi = createApi({
             // }),
             queryFn: async (authData: AuthData) => {
                 await new Promise(resolve => setTimeout(resolve, 500));
+                console.log(authData);
 
                 if (authData.login === '1' && authData.password === '2') {
                     return {

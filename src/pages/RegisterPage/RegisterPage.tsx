@@ -3,8 +3,8 @@ import classNames from 'classNames';
 
 import './RegisterPage.scss';
 
-import { Input } from '../../components/Input/Input.tsx';
-import { Button, ButtonModifiers, ButtonTheme } from '../../components/Button/Button.tsx';
+import { Input } from '@components/Input/Input.tsx';
+import { Button, ButtonModifiers, ButtonTheme } from '@components/Button/Button.tsx';
 import { useRegisterPage } from './hooks/useRegisterPage.ts';
 
 const ROOT_CLASS_NAME = 'register-page';
@@ -72,13 +72,18 @@ export function RegisterPage(): React.ReactElement {
                 </div>
                 <div className={`${ROOT_CLASS_NAME}_result`}>
                     {isError && (
-                        <p className={classNames([`${ROOT_CLASS_NAME}_message`, `${ROOT_CLASS_NAME}_error`])}>
+                        <p className={classNames([`${ROOT_CLASS_NAME}_message`, `${ROOT_CLASS_NAME}_message__error`])}>
                             {errorMessage}
                         </p>
                     )}
                     {isSuccess && (
                         <>
-                            <p className={classNames([`${ROOT_CLASS_NAME}_message`, `${ROOT_CLASS_NAME}_success`])}>
+                            <p
+                                className={classNames([
+                                    `${ROOT_CLASS_NAME}_message`,
+                                    `${ROOT_CLASS_NAME}_message__success`,
+                                ])}
+                            >
                                 Регистрация прошла успешно.
                             </p>
                             <p className={`${ROOT_CLASS_NAME}_timer`}>Вы будите перенаправлены через: {timer}</p>

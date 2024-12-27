@@ -9,7 +9,7 @@
     padding-left: $AppPadding;
     padding-right: $AppPadding;
 
-    &_container {
+    &__container {
         background-color: $White_1;
         padding: 30px;
         border-radius: 8px;
@@ -18,7 +18,7 @@
         box-sizing: border-box;
     }
 
-    &_title {
+    &__title {
         font-size: 2rem;
         font-weight: bold;
         margin-top: 0;
@@ -26,7 +26,7 @@
         color: $Black_1;
     }
 
-    &_form {
+    &__form {
         display: flex;
         flex-direction: column;
         row-gap: 10px;
@@ -37,14 +37,14 @@
         box-shadow: $BoxShadow_Default;
     }
 
-    &_actions {
+    &__actions {
         margin-top: 15px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
 
-    &_result {
+    &__result {
         margin-top: 10px;
         display: flex;
         flex-direction: column;
@@ -55,23 +55,23 @@
         border-radius: $BorderRadius_Default;
     }
 
-    &_message {
+    &__message {
         width: fit-content;
         padding: 3px 12px;
         border-radius: $BorderRadius_Default;
+
+        &_success {
+            color: $Green_1;
+            background-color: $Green_2;
+        }
+
+        &_error {
+            color: $Red_1;
+            background-color: $Red_2;
+        }
     }
 
-    &_success {
-        color: $Green_1;
-        background-color: lighten($Green_1, 40%);
-    }
-
-    &_error {
-        color: $Red_1;
-        background-color: lighten($Red_1, 40%);
-    }
-
-    &_timer {
+    &__timer {
         color: $Gray_1;
     }
 }

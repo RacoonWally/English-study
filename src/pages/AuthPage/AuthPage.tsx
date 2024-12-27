@@ -2,8 +2,8 @@ import React from 'react';
 
 import './AuthPage.scss';
 
-import { Input } from '../../components/Input/Input.tsx';
-import { Button, ButtonModifiers, ButtonTheme } from '../../components/Button/Button.tsx';
+import { Input } from '@components/Input/Input.tsx';
+import { Button, ButtonModifiers, ButtonTheme } from '@components/Button/Button.tsx';
 import { useAuthPage } from './hooks/useAuthPage.ts';
 
 const ROOT_CLASS_NAME = 'auth-page';

@@ -1,0 +1,64 @@
+@use '@root/variables.scss' as *;
+
+.drop-down {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+
+    &__button {
+        cursor: pointer;
+        background-color: $White_1;
+        color: $Black_1;
+        padding: 0 5px;
+        border: 1px solid $Gray_1;
+        border-radius: 4px;
+        font-size: 14px;
+        transition: $Transition_Default;
+
+        &:hover {
+            background-color: $Gray_2;
+        }
+    }
+
+    &__menu-container {
+        display: none;
+        position: absolute;
+        right: 0;
+        z-index: 2;
+    }
+
+    &__menu {
+        background-color: $White_1;
+        border: 1px solid $Gray_1;
+        border-radius: 4px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        flex-direction: row;
+        margin-top: 5px;
+        list-style: none;
+    }
+
+    &:hover &__menu-container {
+        display: flex;
+    }
+
+    &:hover {
+        &__menu {
+            display: flex;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        padding: 2px 8px;
+        font-size: 14px;
+        min-width: 100px;
+        color: $Black_1;
+        cursor: pointer;
+        transition: $Transition_Default;
+
+        &:hover {
+            background-color: $Gray_2;
+        }
+    }
+}

@@ -3,9 +3,9 @@ import { RouteProps } from 'react-router';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import { App } from './App.tsx';
-import { MainPage } from './pages/MainPage/MainPage.tsx';
-import { AuthPage } from './pages/AuthPage/AuthPage.tsx';
-import { RegisterPage } from './pages/RegisterPage/RegisterPage.tsx';
+import { MainPage } from '@pages/MainPage/MainPage.tsx';
+import { AuthPage } from '@pages/AuthPage/AuthPage.tsx';
+import { RegisterPage } from '@pages/RegisterPage/RegisterPage.tsx';
 
 export const enum PageRoutesPaths {
     MainPage = '/',
@@ -26,7 +26,7 @@ export function PageRouter(): React.ReactElement {
         {
             path: PageRoutesPaths.RegisterPage,
             element: <RegisterPage />,
-        }
+        },
     ];
 
     return (
